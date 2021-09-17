@@ -7,14 +7,34 @@ Source: https://www.flickr.com/photos/32413914@N00/1475776461/
 # Pytorch inference
 For performing the inference in Pytorch, check my other repository **[Ultrafast Lane Detection Inference Pytorch](https://github.com/ibaiGorordo/Ultrafast-Lane-Detection-Inference-Pytorch-)**.
 
-# Requirements
+# Tested Environment
+## Computer or Laptop
+- 
+
+## Single Board
+- Jetson Xavier AGX. JetPack 4.6
+# Requirements for Laptop
 
  * **OpenCV**, **scipy**, **onnx** and **onnxruntime**. **pafy** and **youtube-dl** are required for youtube video inference. 
  
-# Installation
+# Requirements for Nvidia Xavier
+
+ * **OpenCV**, **scipy**, **onnx** and **onnxruntime**. **pafy**  and **youtube-dl**, **Nvidia Xavier AGX**, **JetPack 4.6** and **Python3.6** .
+
+# Installation for Laptop
 ```
 pip install -r requirements.txt
 pip install pafy youtube-dl
+```
+# Installation for Nvidia Xavier
+```
+pip3 install opencv-python
+pip3 install scipy
+Download >> https://nvidia.app.box.com/s/bfs688apyvor4eo8sf3y1oqtnarwafww
+Install  >> pip3 install onnxruntime_gpu-1.8.0-cp36-cp36m-linux_aarch64.whl
+pip3 install scikit-build
+if you found not match version try to upgrade the PIP >> sudo -H pip3 install --upgrade pip
+
 ```
 
 # ONNX model
@@ -53,5 +73,7 @@ The pretrained Pytorch model was taken from the [original repository](https://gi
  # [Inference video Example](https://youtu.be/0Owf6gef1Ew) 
  ![!Ultrafast lane detection on video](https://github.com/ibaiGorordo/Ultrafast-Lane-Detection-Inference-Pytorch-/blob/main/doc/img/laneDetection.gif)
  
- Original video: https://youtu.be/2CIxM7x-Clc (by Yunfei Guo)
- 
+ # Result for Nvidia Xavier
+- YoutTube: https://www.youtube.com/watch?v=yBmcYDke7Wg
+- Original video: https://youtu.be/2CIxM7x-Clc (by Yunfei Guo)
+
